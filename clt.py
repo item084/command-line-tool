@@ -79,6 +79,11 @@ def cmd_add():
     pass
 
 
+def cmd_edit():
+    mode = "EDIT"
+    pass
+
+
 def cmd_delete():
     mode = "DEL"
     pass
@@ -108,15 +113,18 @@ def main():
                 '\n{} [*] Enter a number:\n'
                 '       1. View database\n'
                 '       2. Add an item\n'
-                '       3. Delete an item\n'
-                '       4. Exit\n{} {} > {}'.format(GREEN, YELLOW, mode, CLOSE_COLOR))
+                '       3. Edit an item\n'
+                '       4. Delete an item\n'
+                '       5. Exit\n{} {} > {}'.format(GREEN, YELLOW, mode, CLOSE_COLOR))
         if service_number is '1':
             cmd_view()
         elif service_number is '2':
             cmd_add()
         elif service_number is '3':
-            cmd_delete()
+            cmd_edit()
         elif service_number is '4':
+            cmd_delete()
+        elif service_number is '5':
             break
         else:
             back_line()
